@@ -3,7 +3,7 @@ class rtemp:
   def __init__(self,port):
     self.port = port;
   
-  def read(self)
+  def read(self):
 
     import serial
     if self.port==0:
@@ -15,11 +15,11 @@ class rtemp:
     mtemp=b'\x04\x32\x37\x4D\x31\x05'
     ser.write(mtemp)  
     line = ser.readline()  
-    print(line)
+#    print(line)
     line2 = line.strip().decode("utf-8")
     b=line2.split()
-    print("measurement temp ",b[1][:-1])
+#    print("measurement temp ",b[1][:-1])
     c=float(b[1][:-2])
-    print(c)
+#    print(c)
     ser.close()
     return c

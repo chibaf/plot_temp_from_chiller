@@ -1,4 +1,5 @@
-import rtemp from rtemp_class
+from rtemp_class import rtemp
 
-temps=rtemp(1)
-print(temps.read())
+for i in range(0,10):
+  temps=rtemp(1)
+  print(temps.read())
